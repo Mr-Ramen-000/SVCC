@@ -25,54 +25,57 @@ let data,
   enrolledRowsBScreen = "",
   enrolledRowsSScreen = "";
 function getEnrolledData() {
-  $.getJSON("../../json/student_subjects.json", function (e) {
-    let n = JSON.parse(sessionStorage.getItem("esInput"));
-    if (
-      ((data = e),
-      (availableYear = Object.keys(e.Year).sort().reverse()),
-      (year = n ? n.year : availableYear[0]),
-      (availableSem = Object.keys(e.Year[year]).sort().reverse()),
-      (sem = n ? n.sem : availableSem[0]),
-      availableYear)
-    ) {
-      let e = "",
-        n = "";
-      $.each(availableYear, function (n, a) {
-        e +=
-          a === year
-            ? `\n              <option value="${a}" selected>\n                ${a}\n              </option>;`
-            : `\n              <option value="${a}">\n                ${a}\n              </option>;`;
-      }),
-        (listOptionsYear = e),
-        $(".enrolledSubject-section #year").html(listOptionsYear),
-        $.each(availableSem, function (e, a) {
-          n +=
-            a === sem
-              ? `\n                <option value="${a}" selected>\n                  ${a}\n                </option>;`
-              : `\n                <option value="${a}">\n                  ${a}\n                </option>;`;
+  $.getJSON(
+    "https://mr-ramen-000.github.io/practice001/json/student_subjects.json",
+    function (e) {
+      let n = JSON.parse(sessionStorage.getItem("esInput"));
+      if (
+        ((data = e),
+        (availableYear = Object.keys(e.Year).sort().reverse()),
+        (year = n ? n.year : availableYear[0]),
+        (availableSem = Object.keys(e.Year[year]).sort().reverse()),
+        (sem = n ? n.sem : availableSem[0]),
+        availableYear)
+      ) {
+        let e = "",
+          n = "";
+        $.each(availableYear, function (n, a) {
+          e +=
+            a === year
+              ? `\n              <option value="${a}" selected>\n                ${a}\n              </option>;`
+              : `\n              <option value="${a}">\n                ${a}\n              </option>;`;
         }),
-        (listOptionsSem = n),
-        $(".enrolledSubject-section #sem").html(listOptionsSem);
+          (listOptionsYear = e),
+          $(".enrolledSubject-section #year").html(listOptionsYear),
+          $.each(availableSem, function (e, a) {
+            n +=
+              a === sem
+                ? `\n                <option value="${a}" selected>\n                  ${a}\n                </option>;`
+                : `\n                <option value="${a}">\n                  ${a}\n                </option>;`;
+          }),
+          (listOptionsSem = n),
+          $(".enrolledSubject-section #sem").html(listOptionsSem);
+      }
+      if (e.Year[year][sem]) {
+        let n = "",
+          a = "";
+        $.each(e.Year[year][sem], function (s, t) {
+          (n += rowBScreen(t, e.ShowGrade)),
+            (a += rowSScreen(t, e.ShowGrade)),
+            !enrolledRowsBScreen &&
+              $(window).width() >= 1025 &&
+              $("#enrolledTable").append(rowBScreen(t, e.ShowGrade)),
+            !enrolledRowsSScreen &&
+              $(window).width() <= 1024 &&
+              $(".enrolledSubject-section .rows").append(
+                rowSScreen(t, e.ShowGrade)
+              );
+        }),
+          (enrolledRowsBScreen = n),
+          (enrolledRowsSScreen = a);
+      } else console.log("No Record...");
     }
-    if (e.Year[year][sem]) {
-      let n = "",
-        a = "";
-      $.each(e.Year[year][sem], function (s, t) {
-        (n += rowBScreen(t, e.ShowGrade)),
-          (a += rowSScreen(t, e.ShowGrade)),
-          !enrolledRowsBScreen &&
-            $(window).width() >= 1025 &&
-            $("#enrolledTable").append(rowBScreen(t, e.ShowGrade)),
-          !enrolledRowsSScreen &&
-            $(window).width() <= 1024 &&
-            $(".enrolledSubject-section .rows").append(
-              rowSScreen(t, e.ShowGrade)
-            );
-      }),
-        (enrolledRowsBScreen = n),
-        (enrolledRowsSScreen = a);
-    } else console.log("No Record...");
-  });
+  );
 }
 function options() {
   $(document).ready(function () {
