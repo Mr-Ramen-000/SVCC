@@ -25,7 +25,7 @@ let data,
   enrolledRowsBScreen = "",
   enrolledRowsSScreen = "";
 function getEnrolledData() {
-  $.getJSON("../json/student_subjects.json", function (e) {
+  $.getJSON("../../json/student_subjects.json", function (e) {
     let n = JSON.parse(sessionStorage.getItem("esInput"));
     if (
       ((data = e),
