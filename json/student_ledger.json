@@ -1,0 +1,166 @@
+{
+    "Transaction": {
+        "2022-2": [
+            {
+                "No": "1",
+                "Description": "TOTAL ASSESSMENT",
+                "Date/Time": "",
+                "Debit": "10,350.00",
+                "Credit": "",
+                "Balance": ""
+            },
+            {
+                "No": "2",
+                "Description": "TOTAL DISCOUNT",
+                "Date/Time": "",
+                "Debit": "",
+                "Credit": "0.00",
+                "Balance": "10,350.00"
+            },
+            {
+                "No": "3",
+                "Description": [
+                    "0000000001",
+                    "TUITION FEE DOWN PAYMENT"
+                ],
+                "Date/Time": [
+                    "01-18-2023",
+                    "02:54 PM"
+                ],
+                "Debit": "",
+                "Credit": "2,000.00",
+                "Balance": "8,350.00"
+            },
+            {
+                "No": "4",
+                "Description": [
+                    "0000000002",
+                    "TUITION FEE INSTALLMENT PAYMENT"
+                ],
+                "Date/Time": [
+                    "02-25-2023",
+                    "08:17 AM"
+                ],
+                "Debit": "",
+                "Credit": "1,500.00",
+                "Balance": "6,850.00"
+            }
+        ],
+        "2022-1": [
+            {
+                "No": "1",
+                "Description": "TOTAL ASSESSMENT",
+                "Date/Time": "",
+                "Debit": "9,350.00",
+                "Credit": "",
+                "Balance": ""
+            },
+            {
+                "No": "2",
+                "Description": "TOTAL DISCOUNT",
+                "Date/Time": "",
+                "Debit": "",
+                "Credit": "0.00",
+                "Balance": "9,350.00"
+            },
+            {
+                "No": "3",
+                "Description": [
+                    "0000000001",
+                    "TUITION FEE DOWN PAYMENT"
+                ],
+                "Date/Time": [
+                    "08-10-2022",
+                    "12:45 PM"
+                ],
+                "Debit": "",
+                "Credit": "1,000.00",
+                "Balance": "8,350.00"
+            },
+            {
+                "No": "4",
+                "Description": [
+                    "0000000002",
+                    "TUITION FEE INSTALLMENT PAYMENT"
+                ],
+                "Date/Time": [
+                    "09-09-2022",
+                    "09:07 AM"
+                ],
+                "Debit": "",
+                "Credit": "2,000.00",
+                "Balance": "6,350.00"
+            },
+            {
+                "No": "5",
+                "Description": [
+                    "0000000002",
+                    "TUITION FEE INSTALLMENT PAYMENT"
+                ],
+                "Date/Time": [
+                    "11-14-2022",
+                    "01:08 PM"
+                ],
+                "Debit": "",
+                "Credit": "2,000.00",
+                "Balance": "4,350.00"
+            },
+            {
+                "No": "6",
+                "Description": [
+                    "0000000006",
+                    "TUITION FEE LANDBANK"
+                ],
+                "Date/Time": [
+                    "11-21-2022",
+                    "09:35 AM"
+                ],
+                "Debit": "",
+                "Credit": "2,000.00",
+                "Balance": "2,350.00"
+            },
+            {
+                "No": "7",
+                "Description": [
+                    "0000000002",
+                    "TUITION FEE INSTALLMENT PAYMENT"
+                ],
+                "Date/Time": [
+                    "12-14-2022",
+                    "08:19 AM"
+                ],
+                "Debit": "",
+                "Credit": "2,350.00",
+                "Balance": "0.00"
+            }
+        ]
+    },
+    "ExamPermit": {
+        "CurrentSem": [
+            {
+                "Exam": "Prelim (33%)",
+                "RequiredAmount": "3,415.50",
+                "Balance": "0.00",
+                "ExamPermit": "Yes"
+            },
+            {
+                "Exam": "Midterm (22%)",
+                "RequiredAmount": "2,277.00",
+                "Balance": "2,192.50",
+                "ExamPermit": "No"
+            },
+            {
+                "Exam": "Pre-Final (22%)",
+                "RequiredAmount": "2,277.00",
+                "Balance": "2,277.00",
+                "ExamPermit": "No"
+            },
+            {
+                "Exam": "Final (23%)",
+                "RequiredAmount": "2,380.50",
+                "Balance": "2,380.50",
+                "ExamPermit": "No"
+            }
+        ]
+    }
+}
